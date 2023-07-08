@@ -146,7 +146,7 @@
                         <div class="col-4">
                             <img style="height: 12rem; width: 20rem"
                                 src="{{ Storage::disk('local')->exists("public/states/{$state->name}")
-                                    ? Storage::url('public/states/' . $state->name . "/{$state->stateImages()->first()->image}")
+                                    ? Storage::url('public/states/' . $state->name . "/{$state->stateImages()->first()->image}") ?? asset('user/images/produk1.png')
                                     : asset('user/images/produk1.png') }}"
                                 class="img-fluid" alt="">
                         </div>
